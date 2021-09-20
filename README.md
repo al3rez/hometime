@@ -41,3 +41,10 @@ Then you can run `RSpec` tests using the command below:
 ```sh
 docker compose run web rspec --format doc
 ```
+
+
+
+### Things that can be done
+
+- [ ] Use a serializer gem to prettify the response of `ReservationsController#create`
+- [ ] Add static typing / schema validations inside each mapper to avoid bad data
