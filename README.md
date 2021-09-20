@@ -1,6 +1,6 @@
 # Hometime
 
-[![asciicast](https://asciinema.org/a/436916.svg)](https://asciinema.org/a/436916)
+<a href="https://asciinema.org/a/436916" target="_blank"><img width="80%" src="https://asciinema.org/a/436916.svg" /></a>
 
 ### Running the application
 
