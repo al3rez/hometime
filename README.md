@@ -48,3 +48,4 @@ docker compose run web rspec --format doc
 
 - [ ] Use a serializer gem to prettify the response of `ReservationsController#create`
 - [ ] Add static typing / schema validations inside each mapper to avoid bad data
+- [ ] Deploy the application on Heroku
