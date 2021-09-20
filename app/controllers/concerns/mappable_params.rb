@@ -24,6 +24,7 @@ module MappableParams
     end
 
     def booking?
+      params[:reservation] ||= {}
       params[:reservation][:code].present?
     end
 

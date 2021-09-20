@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  resources :reservations, only: [:create, :update]
+  resources :healthy, only: [:index]
+  resources :reservations, only: [:create]
 end

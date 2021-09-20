@@ -1,24 +1,43 @@
-# README
+# Hometime
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[![asciicast](https://asciinema.org/a/436916.svg)](https://asciinema.org/a/436916)
 
-Things you may want to cover:
+### Running the application
 
-* Ruby version
+To run this project simply you need to have Docker installed.
+>  https://docs.docker.com/get-docker/
 
-* System dependencies
+```sh
+cd hometime
+docker compose up
+```
+Wait for a few seconds until Docker instances become `healthy`, you can run the migrations.
+> NOTE: You can check if Docker instances are running healthy by executing `docker-compose ps`
 
-* Configuration
+```sh
+docker compose run web rails db:create db:migrate RAILS_ENV=development
+```
 
-* Database creation
+> NOTE: You can run this using `docker-compose` but the latest version of
+> Docker has added `docker compose` but if you find it unstable you can install
+> `docker-compose`.
+>```sh
+>cd hometime
+>docker-compose up
+>docker-compose run web rails db:create db:migrate RAILS_ENV=development
+>```
 
-* Database initialization
 
-* How to run the test suite
+### Running the tests
 
-* Services (job queues, cache servers, search engines, etc.)
+You need to run the migrations for test environment using the command below:
 
-* Deployment instructions
+```sh
+docker compose run web rails db:create db:migrate RAILS_ENV=development
+```
 
-* ...
+Then you can run `RSpec` tests using the command below:
+
+```sh
+docker compose run web rspec --format doc
+```

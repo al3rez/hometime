@@ -33,10 +33,10 @@ class BookingParamsMapper
 
   def guest_attributes
     {
-        email:         params[:guest_email],
-        first_name:    params[:guest_first_name],
-        last_name:     params[:guest_last_name],
-        phone_numbers: params[:guest_phone_numbers],
+        email:         params[:reservation][:guest_email],
+        first_name:    params[:reservation][:guest_first_name],
+        last_name:     params[:reservation][:guest_last_name],
+        phone_numbers: params[:reservation][:guest_phone_numbers],
     }
   end
 end

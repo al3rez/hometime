@@ -64,6 +64,7 @@ RSpec.describe "Reservations", type: :request do
       it "creates a new reservation" do
         post "/reservations", params: airbnb_params
         expect(response).to have_http_status(:ok)
+        expect(response).to have_http_status(:ok)
       end
     end
   end
@@ -98,7 +99,6 @@ RSpec.describe "Reservations", type: :request do
         booking_params[:reservation][:nights] = 10
         booking_params[:reservation][:status_type] = 'declined'
         post "/reservations", params: booking_params
-        expect(response).to have_http_status(:ok)
         expect(response).to have_http_status(:ok)
         expect(response.parsed_body["nights"]).to eq 10 
         expect(response.parsed_body["status"]).to eq "declined"
